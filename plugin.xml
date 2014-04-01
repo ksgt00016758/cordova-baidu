@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:rim="http://www.blackberry.com/ns/widgets"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="org.apache.cordova.baidu"
+    version="0.4">
+    <name>Baidu</name>
+    <description>A cordova plugin, a JS version of Baidu SDK</description>
+    <license>MIT</license>
+    <keywords>cordova,baidu map</keywords>
+    <repo>https://github.com/xu-li/cordova-baidu.git</repo>
+    <issue>https://github.com/xu-li/cordova-baidu/issues</issue>
+
+    <js-module src="www/baidu.js" name="Baidu">
+        <clobbers target="Baidu" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Baidu">
+                <param name="android-package" value="org.apache.cordova.baidu.BaiDuLoc"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/BaiDuLoc.java" target-dir="src/org/apache/cordova/baidu" />
+    </platform>
+</plugin>
