@@ -54,6 +54,7 @@ public class BaiDuLoc extends CordovaPlugin {
             						jsonObj.put("AddrStr", location.getAddrStr());
             					}
             					Log.d("BaiduMaps", "run success"+jsonObj.toString());
+                                mLocationClient.stop();
             					callbackContext.success(jsonObj);            					
             					result = true;
             				} catch (JSONException e) {
