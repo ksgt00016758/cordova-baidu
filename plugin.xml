@@ -13,7 +13,7 @@
     <issue>https://github.com/xu-li/cordova-baidu/issues</issue>
 
     <js-module src="www/baidu.js" name="Baidu">
-        <clobbers target="Baidu" />
+        <clobbers target="window.Baidu" />
     </js-module>
 
     <!-- android -->

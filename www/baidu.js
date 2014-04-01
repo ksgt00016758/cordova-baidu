@@ -30,7 +30,7 @@ module.exports = {
 				fail(code[errcode])
 			};
 		}
-	},function(err){},"BaiDuMapLocation", action ,[]);
+	},function(err){},"Baidu", action ,[]);
 	}
 
 };
